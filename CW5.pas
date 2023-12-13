@@ -67,7 +67,6 @@ begin
     3: 
       assign(f, 'test3.txt');
   end;
-  writeln;
   reset(f);
   count := 0;
   while not eof(f) do begin
@@ -82,7 +81,7 @@ begin
     begin
       len:=length(arr)-1;   
       j := len;
-      while j > 1 do begin
+      while j > 0 do begin
           max := arr[0];
           id_max := 0;
           for i := 1 to j do
@@ -98,7 +97,6 @@ begin
   2:
     RadixSort(arr);
   end;
-  writeln;
   writeln('Отсортировано в файл answer.txt: ');
   assign(answer, 'answer.txt');
   rewrite(answer);
